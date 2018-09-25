@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+
+  <style>
+    header {
+        width : 100%;
+        margin-top: 30px;
+    }
+
+    #header_search {
+      width : 1000px;
+      margin-left: :100px;
+    }
+
+    #header_search div {
+    }
+
+    #header_search .search input {
+        width:400px; height:40px;
+        font-size:20px;
+        border:3px solid #58ACFA;
+        margin-left: 100px;
+    }
+
+    #header_search .btn_search {
+        width:50px; height:46px;
+        margin : 0px 0px 0px 0px;
+        background:#58ACFA;
+        border:0;
+        color: white;
+        vertical-align: top;
+    }
+
+    #content {
+        width:1100px;
+        margin: 0 auto;
+        margin-top:60px;
+        margin-left: 100px;
+        overflow:hidden;
+    }
+
+    #content #main {
+      float:left;
+    }
+
+    #content #main div {
+        border:1px solid #cccccc;
+    }
+
+    #content #main div:nth-child(1) {
+        width:700px; height:150px;
+    }
+
+    #content #main div:nth-child(2) {
+        width:700px; height:150px;
+        margin-top:20px;
+    }
+
+    #content #main div:nth-child(3) {
+        width:700px; height:150px;
+        margin-top:20px;
+    }
+
+    #content #main_rank {
+      float: left;
+    }
+
+    #content #main_rank div {
+      border:1px solid #cccccc;
+        width:300px; height: 450px;
+        margin-left: 70px;
+        margin-top: :50px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="header_search">
+      <div class="search">
+        <input type="text" />
+        <button type="submit" class="btn_search">검색</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="content">
+    <div id="main">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div id="main_rank">
+      <div>ranking</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
