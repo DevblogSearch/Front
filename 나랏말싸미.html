@@ -3,97 +3,66 @@
 <html lang="ko">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    header {
-        width : 100%;
-        margin-top: 30px;
-    }
+  <title>한국 개발자 블로그 검색</title>
 
-    #header_search {
-      width : 1000px;
-      margin-left: :100px;
-    }
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    #header_search div {
-    }
+  <!--Global Javascript-->
+  <script src="assets/pages/plugins/jquery/jquery-min.js"></script>
+  <script src="assets/pages/plugins/backbone/underscore-min.js"></script>
+  <script src="assets/pages/plugins/backbone/backbone-min.js"></script>
+  <script src="assets/pages/plugins/backbone/backbone.marionette.min.js"></script>
+  <!--END Global Javascript-->
 
-    #header_search .search input {
-        width:400px; height:40px;
-        font-size:20px;
-        border:3px solid #58ACFA;
-        margin-left: 100px;
-    }
+  <!--Global CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+  <!--END Global CSS-->
 
-    #header_search .btn_search {
-        width:50px; height:46px;
-        margin : 0px 0px 0px 0px;
-        background:#58ACFA;
-        border:0;
-        color: white;
-        vertical-align: top;
-    }
-
-    #content {
-        width:1100px;
-        margin: 0 auto;
-        margin-top:60px;
-        margin-left: 100px;
-        overflow:hidden;
-    }
-
-    #content #main {
-      float:left;
-    }
-
-    #content #main div {
-        border:1px solid #cccccc;
-    }
-
-    #content #main div:nth-child(1) {
-        width:700px; height:150px;
-    }
-
-    #content #main div:nth-child(2) {
-        width:700px; height:150px;
-        margin-top:20px;
-    }
-
-    #content #main div:nth-child(3) {
-        width:700px; height:150px;
-        margin-top:20px;
-    }
-
-    #content #main_rank {
-      float: left;
-    }
-
-    #content #main_rank div {
-      border:1px solid #cccccc;
-        width:300px; height: 450px;
-        margin-left: 70px;
-        margin-top: :50px;
-    }
-
-  </style>
+  <link rel="stylesheet" href="assets/pages/css/common.css" type="text/css">
+  <link href="assets/pages/css/search-result.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <header>
+  <header class="page-header navbar navbar-fixed-top">
     <div id="header_search">
       <div class="search">
-        <input type="text" />
-        <button type="submit" class="btn_search">검색</button>
+        <div id="area-input" class="input-group stylish-input-group">
+          <form action="/">
+            <div class="">
+              <input id="inputSearch" class="form-control" type="text" placeholder="검색" maxlength="100" autocomplete="off"
+                autofocus="true">
+            </div>
+          </form>
+          <span class="input-group-addon">
+            <button type="submit">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
       </div>
     </div>
   </header>
 
   <div id="content">
     <div id="main">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="article"></div>
+      <div class="navigation">
+        <nav>
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <div id="main_rank">
