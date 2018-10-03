@@ -34,7 +34,7 @@
 <body>
     <div id="login-main">
         <button class="btn blue uppercase bold">로그인</button>
-        <button class="btn blue uppercase bold">회원가입</button>
+        <button class="btn blue uppercase bold">회원가입</button><!--템플릿으로 해줘야 하는가? 로그인 되었을때, 안되었을때-->
     </div>
 <div class="content center col-sm-4 col-sm-offset-4" id="main">
     <div id="area-logo">
@@ -45,12 +45,14 @@
         </div>
     </div>
     <div class="input-group">
-        <form action="/">
-            <input type = "text" class="form-control" placeholder="검색어를 입력하세요" style="height: 44px">
+        <form action="http://ec2-52-78-115-199.ap-northeast-2.compute.amazonaws.com/search" method="GET" id="form1">
+            <input type = "text" class="form-control" placeholder="검색어를 입력하세요" style="height: 44px" name="q">
+            <input type="hidden" name="start" value="0"><!--0부터 시작?-->
+            <input type="hidden" name="n" value="10">
         </form>
         <span class="input-group-btn">
-                        <button class="btn blue uppercase bold" style="height: 44px">검색</button>
-                    </span>
+            <button form="form1" class="btn blue uppercase bold" style="height: 44px">검색</button>
+        </span>
     </div>
 </div>
 
